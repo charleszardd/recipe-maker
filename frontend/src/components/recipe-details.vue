@@ -51,7 +51,7 @@
             </v-col>
 
             <v-card-subtitle class="mb-3 text-grey-darken-2">
-              <v-chip class="mr-2" label>{{ recipe.category }}</v-chip>
+              <v-chip class="mr-2 text-grey-darken-4" label>{{ recipe.category }}</v-chip>
               <v-chip :color="getDifficultyColor(recipe.difficulty)" label>
                 {{ recipe.difficulty }}
               </v-chip>
