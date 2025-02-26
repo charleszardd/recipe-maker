@@ -1,0 +1,3 @@
+<template>
+    <recipe-details />
+</template>
