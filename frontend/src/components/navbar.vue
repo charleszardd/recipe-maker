@@ -11,7 +11,7 @@
       <v-spacer></v-spacer>
   
       <div class="d-none d-md-flex">
-        <Button class="mr-5" to="/auth/login">Sign In</Button>
+        <Button class="mr-5 font-weight-bold" to="/auth/login">Sign In</Button>
         <Button height="40" variant="outlined" to="/create-recipe" class="bg-black rounded-lg">Get Started</Button>
       </div>
   

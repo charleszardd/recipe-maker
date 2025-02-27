@@ -30,7 +30,11 @@ APPEND_SLASH = False
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "localhost",
+    "127.0.0.1",
+    "192.168.28.202",  # Your local IP
+]
 
 
 # Application definition
@@ -65,6 +69,8 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "http://127.0.0.1:8000",
     "http://localhost:8000",
+    "http://192.168.28.202:8000",
+    "http://192.168.28.202:3000",
 ]
 
 ROOT_URLCONF = 'backend.urls'
