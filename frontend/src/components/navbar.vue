@@ -5,7 +5,7 @@
         class="logo cursor-pointer text-black font-weight-bold main-font"
         style="text-decoration: none"
       >
-        <span class="main-font">Recipe Maker</span>
+        <v-icon>mdi-knife</v-icon><span class="main-font font-weight-bold">Recipe Maker</span>
       </router-link>
   
       <v-spacer></v-spacer>
