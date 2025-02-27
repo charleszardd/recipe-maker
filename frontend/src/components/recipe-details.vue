@@ -210,7 +210,8 @@
                 <v-file-input
                   label="Recipe Image"
                   variant="outlined"
-                  prepend-icon="mdi-camera"
+                  :prepend-icon="false"
+                  prepend-inner-icon="mdi-image"
                   accept="image/*"
                   class="mb-4"
                   @change="handleImageUpload"
@@ -387,22 +388,18 @@ const updateRecipe = async () => {
   try {
     const formData = new FormData();
 
-    // Append numeric fields
     const numericFields = ["calories", "protein", "fats", "carbs"];
     numericFields.forEach((field) => {
       formData.append(field, Number(editedRecipe.value[field]));
     });
 
-    // Append text fields
     formData.append("name", editedRecipe.value.name);
     formData.append("category", editedRecipe.value.category);
     formData.append("difficulty", editedRecipe.value.difficulty);
 
-    // Ensure ingredients and instructions are included
     formData.append("ingredients", editedRecipe.value.ingredients || "");
     formData.append("instructions", editedRecipe.value.instructions || "");
 
-    // Append image only if a new one is selected
     if (editedRecipe.value.image instanceof File) {
       formData.append("image", editedRecipe.value.image);
     }
